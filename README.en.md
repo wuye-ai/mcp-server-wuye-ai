@@ -1,0 +1,174 @@
+# CRIC Wuye AI MCP Server
+
+--------------
+[![zh-CN](https://img.shields.io/badge/lang-zh--CN-red.svg)](https://github.com/wuye-ai/mcp-server-wuye-ai/blob/master/README.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/wuye-ai/mcp-server-wuye-ai/blob/master/README.en.md)
+
+Available on: [**[NPM]**](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai) [**[MCP.so]**](https://mcp.so/server/CRIC%E7%89%A9%E4%B8%9AAI/CRIC)
+
+(More MCP platform integrations coming soon…)
+
+--------------
+
+## Overview
+
+**CRIC Wuye AI** (CRIC物业AI) is an intelligent assistant developed by [CRIC](http://www.cricchina.com/) specifically for the property management industry. It was [officially launched](https://mp.weixin.qq.com/s/GC4V1M6N199Ay2f3kZan_Q) on April 25, 2025.
+
+*P.S. Wuye (物业) means Property Management in Chinese.*
+
+Leveraging a combination of industry knowledge base construction, multimodal large models, and RAG technology, **CRIC Wuye AI** integrates five core capability modules: **Industry Research**, **Laws & Regulations**, **Community Governance**, **Project Operations**, and **Content Writing**. It also expands into two smart agents focused on **News & Public Opinion** and **Talent Training** based on vertical industry knowledge.
+
+## Core Capabilities
+
+CRIC builds its competitive edge in the Wuye AI collaboration space through three main capabilities:
+
+- **Data Asset Transformation:** Converts over 1 billion characters of industry text and terabytes of multimodal data into high-quality datasets tailored for the property sector, along with a custom industry data quality evaluation system to ensure accuracy and reliability.
+- **Scenario Penetration:** Focused on 20+ vertical business scenarios in property management, leveraging targeted knowledge bases to enable precise matching.
+- **Ecosystem Evolution:** Real-time monitoring of 500+ trusted information and data sources daily, processing over 100,000 real-time data updates. Achieves over 90% accuracy in areas like policy alerts, business opportunity mining, and tender analysis—creating a continuously evolving industry AI knowledge hub.
+
+## MCP Server Features
+
+**CRIC Wuye AI MCP Server** is a server-side implementation based on the [Model Context Protocol](https://modelcontextprotocol.github.io/), delivering part of the atomic capabilities of the **CRIC Wuye AI** platform. The current version provides the following tools:
+
+- **Get Daily News:** Retrieve the property industry’s daily news report based on a `YYYY-MM-DD` date format.
+- **Get Hot Topics List:** Retrieve categorized lists of trending questions in the property management sector within CRIC Wuye AI.
+- **List Available Knowledge Bases:** List available knowledge bases for querying.
+- **Search Knowledge Base:** Specify a knowledge base ID and query to retrieve matching results as document snippets or full text for AI reference.
+
+More features are coming soon. Stay tuned.
+
+## Obtaining an Access Token
+
+To use the CRIC Wuye AI MCP Server, you must first obtain an **Access Token**. Please contact our support staff via email at [xuanao@cric.com](mailto:xuanao@cric.com).
+
+## Getting Started
+
+### 1. SSE Mode (http)
+
+#### 1.1 Run
+
+You can run your own MCP Server with HTTP mode enabled, or use the official URL we provide.
+
+##### A. Self-hosted:
+
+```bash
+MODE=http PORT=3011 npx -y @wuye-ai/mcp-server-wuye-ai
+```
+
+After successful startup, your MCP Server URL is `http://localhost:3011/sse/mcp`.
+
+##### B. Use Official:
+
+Alternatively, you can use our official MCP Server URLs:
+
+- Testing: `https://mcp.wuye-ai-staging.cricbigdata.com/sse/mcp`
+- Production: `https://mcp.wuye-ai.cricbigdata.com/sse/mcp`
+
+#### 1.2 Test
+
+You can test the SSE MCP Server using MCP Inspector or third-party tools.
+
+##### MCP Inspector:
+
+Once the server is running, use [MCP Inspector](https://github.com/modelcontextprotocol/inspector) to test service status:
+
+```bash
+npx @modelcontextprotocol/inspector
+```
+
+After launching, open the Web UI in your browser (default: http://127.0.0.1:6274/) and configure the connection:
+
+1. Set **Transport Type** to `SSE` and **URL** to the MCP Server URL obtained earlier.
+2. Under **Authentication**, set **Header Name** to `Authorization` and **Bearer Token** to your **CRIC Wuye AI Access Token**.
+3. Click **Connect**. Once connected, the left panel will show the connection status.
+
+You can now use MCP Inspector to test CRIC Wuye AI MCP Server. See the [MCP Inspector Documentation](https://modelcontextprotocol.io/docs/tools/inspector) for more details.
+
+##### Third-Party Tools:
+
+When using SSE mode with other tools, set the `Authorization` header with your Access Token. For example, in [Cline](https://cline.bot/):
+
+```json
+{
+  "mcpServers": {
+    "CRIC-Wuye-AI": {
+      "transportType": "sse",
+      "url": "{{Your MCP Server URL}}",
+      "headers": {
+        "Authorization": "Bearer {{Your Access Token}}"
+      }
+    }
+  }
+}
+```
+
+Note: Some tools using [@modelcontextprotocol/typescript-sdk](https://github.com/modelcontextprotocol/typescript-sdk) may not properly apply HTTP headers ([known issue](https://github.com/modelcontextprotocol/typescript-sdk/issues/317)). As a workaround, you can also pass the token via the query string:
+
+```json
+{
+  "mcpServers": {
+    "CRIC-Wuye-AI": {
+      "transportType": "sse",
+      "url": "{{Your MCP Server URL}}?token={{Your Access Token}}"
+    }
+  }
+}
+```
+
+### 2. Stdio Mode
+
+#### 2.1 Run
+
+Stdio mode is also supported. To start the server:
+
+```bash
+CRIC_WUYE_AI_ACCESS_TOKEN={{Your Access Token}} npx -y @wuye-ai/mcp-server-wuye-ai
+```
+
+#### 2.2 Test
+
+You can test using either third-party tools or MCP Inspector. Typically, Stdio mode does not require manual startup, as tools will start it automatically.
+
+##### MCP Inspector:
+
+To use Stdio in MCP Inspector:
+
+1. Set **Transport Type** to `Stdio`, **Command** to `npx`, and **Arguments** to `-y @wuye-ai/mcp-server-wuye-ai`.
+2. Under **Environment Variables**, set `CRIC_WUYE_AI_ACCESS_TOKEN` to your **Access Token**.
+3. Click **Connect**. The Inspector will auto-run the server and connect.
+
+You can now test CRIC Wuye AI MCP Server using MCP Inspector.
+
+##### Third-Party Tools:
+
+For Stdio access via third-party tools, specify the Access Token using the `CRIC_WUYE_AI_ACCESS_TOKEN` environment variable. For example, in Cline:
+
+```json
+{
+  "mcpServers": {
+    "CRIC-Wuye-AI": {
+      "transportType": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@wuye-ai/mcp-server-wuye-ai"
+      ],
+      "env": {
+        "CRIC_WUYE_AI_ACCESS_TOKEN": "{{Your Access Token}}"
+      }
+    }
+  }
+}
+```
+
+## Optional Configuration
+
+You can configure how CRIC Wuye AI MCP Server runs via environment variables. Supported options:
+
+| Parameter                        | Default                                  | Description                                                                                                                                                                                        |
+|----------------------------------|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `MODE`                           | `stdio`                                  | Run mode. Options: `stdio`, `http`.                                                                                                                                                                |
+| `HOSTNAME`                       | `0.0.0.0`                                | Hostname for HTTP mode. `0.0.0.0` binds to all your IP addresses.                                                                                                                                  |
+| `PORT`                           | `3011`                                   | Port for HTTP mode.                                                                                                                                                                                |
+| `CRIC_WUYE_AI_ACCESS_TOKEN`      | *none*                                   | CRIC Wuye AI Access Token. If not provided, will use the `Authorization` HTTP header value.                                                                                                        |
+| `CRIC_WUYE_AI_PROVIDER_API_BASE` | `https://export.wuye-ai.cricbigdata.com` | Backend API base URL (***this is not the MCP Server URL***). Optional values: `https://export.wuye-ai-staging.cricbigdata.com` (testing) or `https://export.wuye-ai.cricbigdata.com` (production). |
