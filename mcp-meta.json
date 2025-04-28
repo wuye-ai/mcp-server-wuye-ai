@@ -1,0 +1,34 @@
+{
+  "name": "@wuye-ai/mcp-server-wuye-ai",
+  "title": "CRIC物业AI",
+  "description": "接入 CRIC物业AI 平台的 MCP 服务器。CRIC物业AI 是克而瑞专为物业行业打造的智能 AI 助理。",
+  "author": {
+    "name": "克而瑞"
+  },
+  "gitUrl": "https://github.com/wuye-ai/mcp-server-wuye-ai",
+  "tags": [
+    "知识库",
+    "行业应用",
+    "克而瑞",
+    "资讯",
+    "物业",
+    "业主",
+    "社区治理"
+  ],
+  "memory": 0.5,
+  "cpu": 0.25,
+  "min_instances": 1,
+  "max_instances": 1,
+  "port": 3011,
+  "logo": [
+    "cloud://tcb-advanced-a656fc.7463-tcb-advanced-a656fc-1257967285/mcp-logo.png"
+  ],
+  "env_params": {
+    "MODE": "运行模式，支持 `stdio` 和 `http` 两种模式。默认为 `stdio`。",
+    "HOSTNAME": "HTTP 绑定主机名，仅在 `http` 模式下有效。默认为 `0.0.0.0`，即为绑定到本机所有IP地址。",
+    "PORT": "HTTP 绑定端口，仅在 `http` 模式下有效。默认为 `3011`。",
+    "CRIC_WUYE_AI_ACCESS_TOKEN": "CRIC物业AI Access Token。如果不提供，则使用实际请求 HTTP Authorization Header 中的值。",
+    "CRIC_WUYE_AI_PROVIDER_API_BASE": "CRIC物业AI 后端接入 API，请注意 ***此 URL 不是 CRIC物业AI MCP Server 的 URL*** 。可选值为 `https://export.wuye-ai-staging.cricbigdata.com` （测试环境）、 `https://export.wuye-ai.cricbigdata.com` （生产环境，默认）。"
+  },
+  "transport": "stdio"
+}

@@ -1,11 +1,12 @@
 {
 	"name": "@wuye-ai/mcp-server-wuye-ai",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"private": false,
 	"description": "CRIC物业AI MCP Server",
 	"bin": {
 		"mcp-server-wuye-ai": "index.js"
 	},
+	"repository": "github:wuye-ai/mcp-server-wuye-ai",
 	"scripts": {},
 	"dependencies": {},
 	"devDependencies": {}
