@@ -2,7 +2,7 @@
 
 接入 **CRIC物业AI 平台** 的 MCP 服务器。**CRIC物业AI** 是克而瑞专为物业行业打造的智能 AI 助理。
 
-[前往云开发平台运行 MCP Server](https://tcb.cloud.tencent.com/dev#/ai?tab=mcp&p&mcp-template=mcp-mongo)
+[前往云开发平台运行 MCP Server](https://tcb.cloud.tencent.com/dev#/ai?tab=mcp&p&mcp-template=mcp-server-wuye-ai)
 
 ---
 
