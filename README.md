@@ -1,10 +1,16 @@
 # CRIC物业AI MCP Server
 
 --------------
+![NPM Version](https://img.shields.io/npm/v/%40wuye-ai%2Fmcp-server-wuye-ai)
 [![zh-CN](https://img.shields.io/badge/lang-zh--CN-red.svg)](https://github.com/wuye-ai/mcp-server-wuye-ai/blob/master/README.md)
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/wuye-ai/mcp-server-wuye-ai/blob/master/README.en.md)
 
-已上架：[**[NPM]**](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai) [**[MCP.so]**](https://mcp.so/server/CRIC%E7%89%A9%E4%B8%9AAI/CRIC)
+已上架：
+[**[NPM]**](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai)
+[**[MCP.so]**](https://mcp.so/server/CRIC%E7%89%A9%E4%B8%9AAI/CRIC)
+[**[MCPServers.org]**](https://mcpservers.org/servers/wuye-ai/mcp-server-wuye-ai)
+[**[腾讯云开发]**](https://tcb.cloud.tencent.com/dev#/ai?tab=mcp&p&mcp-template=mcp-server-wuye-ai)
+[**[ModelScope]**](https://modelscope.cn/mcp/servers/@wuye-ai/mcp-server-wuye-ai)
 
 （更多MCP平台陆续上架中……）
 
