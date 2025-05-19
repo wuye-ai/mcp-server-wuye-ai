@@ -1,6 +1,6 @@
 {
 	"name": "@wuye-ai/mcp-server-wuye-ai",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"private": false,
 	"description": "CRIC物业AI MCP Server",
 	"bin": {
