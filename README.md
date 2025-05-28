@@ -5,12 +5,12 @@
 [![zh-CN](https://img.shields.io/badge/lang-zh--CN-red.svg)](https://github.com/wuye-ai/mcp-server-wuye-ai/blob/master/README.md)
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/wuye-ai/mcp-server-wuye-ai/blob/master/README.en.md)
 
-已上架：
-[<img src="https://static-production.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png" width="12" height="12" alt="NPM Logo"> **NPM**](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai)
-[<img src="https://mcp.so/favicon.ico" width="12" height="12" alt="MCP.so Logo"> **MCP.so**](https://mcp.so/server/CRIC%E7%89%A9%E4%B8%9AAI/CRIC)
-[<img src="https://mcpservers.org/icon.png" width="12" height="12" alt="MCPServers.org Logo"> **MCPServers.org**](https://mcpservers.org/servers/wuye-ai/mcp-server-wuye-ai)
-[<img src="https://tcb.cloud.tencent.com/favicon.ico" width="12" height="12" alt="腾讯云开发 Logo"> **腾讯云开发**](https://tcb.cloud.tencent.com/mcp-server/mcp-server-wuye-ai)
-[<img src="https://g.alicdn.com/sail-web/maas/2.8.5/favicon/128.ico" width="12" height="12" alt="ModelScope Logo"> **ModelScope**](https://modelscope.cn/mcp/servers/@wuye-ai/mcp-server-wuye-ai)
+已上架 | 
+[<img src="https://static-production.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png" width="12" height="12" alt="NPM Logo"> **NPM**](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai) | 
+[<img src="https://mcp.so/favicon.ico" width="12" height="12" alt="MCP.so Logo"> **MCP.so**](https://mcp.so/server/CRIC%E7%89%A9%E4%B8%9AAI/CRIC) |
+[<img src="https://mcpservers.org/icon.png" width="12" height="12" alt="MCPServers.org Logo"> **MCPServers.org**](https://mcpservers.org/servers/wuye-ai/mcp-server-wuye-ai) |
+[<img src="https://tcb.cloud.tencent.com/favicon.ico" width="12" height="12" alt="腾讯云开发 Logo"> **腾讯云开发**](https://tcb.cloud.tencent.com/mcp-server/mcp-server-wuye-ai) |
+[<img src="https://g.alicdn.com/sail-web/maas/2.8.5/favicon/128.ico" width="12" height="12" alt="ModelScope Logo"> **ModelScope**](https://modelscope.cn/mcp/servers/@wuye-ai/mcp-server-wuye-ai) |
 [<img src="https://gw.alicdn.com/imgextra/i4/O1CN01vVn7g32134zNZEeAR_!!6000000006928-55-tps-24-24.svg" width="12" height="12" alt="阿里云百炼 Logo"> **阿里云百炼**](https://bailian.console.aliyun.com/?tab=mcp#/mcp-market/detail/cric-wuye-ai)
 
 （更多MCP平台陆续上架中……）
