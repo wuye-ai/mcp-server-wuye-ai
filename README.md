@@ -6,11 +6,12 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/wuye-ai/mcp-server-wuye-ai/blob/master/README.en.md)
 
 已上架：
-[**[NPM]**](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai)
-[**[MCP.so]**](https://mcp.so/server/CRIC%E7%89%A9%E4%B8%9AAI/CRIC)
-[**[MCPServers.org]**](https://mcpservers.org/servers/wuye-ai/mcp-server-wuye-ai)
-[**[腾讯云开发]**](https://tcb.cloud.tencent.com/dev#/ai?tab=mcp&p&mcp-template=mcp-server-wuye-ai)
-[**[ModelScope]**](https://modelscope.cn/mcp/servers/@wuye-ai/mcp-server-wuye-ai)
+[<img src="https://static-production.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png" width="12" height="12" alt="NPM Logo"> **NPM**](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai)
+[<img src="https://mcp.so/favicon.ico" width="12" height="12" alt="MCP.so Logo"> **MCP.so**](https://mcp.so/server/CRIC%E7%89%A9%E4%B8%9AAI/CRIC)
+[<img src="https://mcpservers.org/icon.png" width="12" height="12" alt="MCPServers.org Logo"> **MCPServers.org**](https://mcpservers.org/servers/wuye-ai/mcp-server-wuye-ai)
+[<img src="https://tcb.cloud.tencent.com/favicon.ico" width="12" height="12" alt="腾讯云开发 Logo"> **腾讯云开发**](https://tcb.cloud.tencent.com/mcp-server/mcp-server-wuye-ai)
+[<img src="https://g.alicdn.com/sail-web/maas/2.8.5/favicon/128.ico" width="12" height="12" alt="ModelScope Logo"> **ModelScope**](https://modelscope.cn/mcp/servers/@wuye-ai/mcp-server-wuye-ai)
+[<img src="https://gw.alicdn.com/imgextra/i4/O1CN01vVn7g32134zNZEeAR_!!6000000006928-55-tps-24-24.svg" width="12" height="12" alt="阿里云百炼 Logo"> **阿里云百炼**](https://bailian.console.aliyun.com/?tab=mcp#/mcp-market/detail/cric-wuye-ai)
 
 （更多MCP平台陆续上架中……）
 
@@ -97,7 +98,7 @@ MCP Inspector 启动后，用浏览器打开其 Web UI（默认为：http://127.
   "mcpServers": {
     "CRIC物业AI": {
       "transportType": "sse",
-      "url": "{{您的 CRIC物业AI MCP Server URL}}",
+      "url": "https://mcp.wuye-ai.cricbigdata.com/sse/mcp",
       "headers": {
         "Authorization": "Bearer {{您的 CRIC物业AI Access Token}}"
       }
@@ -113,7 +114,7 @@ MCP Inspector 启动后，用浏览器打开其 Web UI（默认为：http://127.
   "mcpServers": {
     "CRIC物业AI": {
       "transportType": "sse",
-      "url": "{{您的 CRIC物业AI MCP Server URL}}?token={{您的 CRIC物业AI Access Token}}"
+      "url": "https://mcp.wuye-ai.cricbigdata.com/sse/mcp?token={{您的 CRIC物业AI Access Token}}"
     }
   }
 }
@@ -167,12 +168,27 @@ CRIC_WUYE_AI_ACCESS_TOKEN={{您的 CRIC物业AI Access Token}} npx -y @wuye-ai/m
 
 ## 可选配置
 
-您可以通过环境变量来配置 CRIC物业AI MCP Server 的运行方式。以下是可用的配置项：
+您可以通过环境变量或 URL Query（SSE方式下） 来配置 CRIC物业AI MCP Server 的运行方式。以下是可用的配置项：
 
-| 参数名                              | 默认值                                      | 描述                                                                                                                                                                            |
-|----------------------------------|------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `MODE`                           | `stdio`                                  | 运行模式，支持 `stdio` 和 `http` 两种模式。                                                                                                                                                |
-| `HOSTNAME`                       | `0.0.0.0`                                | HTTP 绑定主机名，仅在 `http` 模式下有效。`0.0.0.0`即为绑定到本机所有IP地址。                                                                                                                            |
-| `PORT`                           | `3011`                                   | HTTP 绑定端口，仅在 `http` 模式下有效。                                                                                                                                                    |
-| `CRIC_WUYE_AI_ACCESS_TOKEN`      | *无*                                      | CRIC物业AI Access Token。如果不提供，则使用实际请求 HTTP Authorization Header 中的值。                                                                                                            |
-| `CRIC_WUYE_AI_PROVIDER_API_BASE` | `https://export.wuye-ai.cricbigdata.com` | CRIC物业AI 后端接入 API，请注意 ***此 URL 不是 CRIC物业AI MCP Server 的 URL*** 。可选值为 `https://export.wuye-ai-staging.cricbigdata.com` （测试环境）、 `https://export.wuye-ai.cricbigdata.com` （生产环境） |
+| 环境变量参数名                          | URL Query 参数名 | 默认值                                      | 描述                                                                                                                                                                            |
+|----------------------------------|---------------|------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `MODE`                           | *不支持*         | `stdio`                                  | 运行模式，支持 `stdio` 和 `http` 两种模式。                                                                                                                                                |
+| `HOSTNAME`                       | *不支持*         | `0.0.0.0`                                | HTTP 绑定主机名，仅在 `http` 模式下有效。`0.0.0.0`即为绑定到本机所有IP地址。                                                                                                                            |
+| `PORT`                           | *不支持*         | `3011`                                   | HTTP 绑定端口，仅在 `http` 模式下有效。                                                                                                                                                    |
+| `CRIC_WUYE_AI_ACCESS_TOKEN`      | `token`       | *无*                                      | CRIC物业AI Access Token。如果不提供，则使用实际请求 HTTP Authorization Header 中的值。                                                                                                            |
+| `CRIC_WUYE_AI_PROVIDER_API_BASE` | *不支持*         | `https://export.wuye-ai.cricbigdata.com` | CRIC物业AI 后端接入 API，请注意 ***此 URL 不是 CRIC物业AI MCP Server 的 URL*** 。可选值为 `https://export.wuye-ai-staging.cricbigdata.com` （测试环境）、 `https://export.wuye-ai.cricbigdata.com` （生产环境） |
+| `CRIC_WUYE_AI_NAME_EN`           | `name_cn`     | 由 CRIC物业AI 工作人员为您默认配置                    | 是否启用英文工具名称，支持 `true` 和 `false` 两个取值。启用时，Tool 名称将改为使用英文版本，以提高对部分海外模型的兼容性。对于支持中文工具名称的模型，建议不启用，以获得更好的效果。如果配置该选项，将覆盖默认配置。                                                         |
+| `CRIC_WUYE_AI_FEATURE_SET`       | `feature_set` | 由 CRIC物业AI 工作人员为您默认配置                    | 预配置的工具功能集，支持 `base`、`detail` 等取值。该参数决定了您可用的 Tool 集合，`base` 功能集中提供了“获取可用知识库列表”和通用的“搜索知识库”工具，而 `detail` 功能集中不提供“获取可用知识库列表”工具，但为每个可用的知识库提供了单独的“搜索知识库”工具。如果配置该选项，将覆盖默认配置。         |
+
+*注：* URL Query 配置时，只需要在 SSE 调用的 URL 后面拼接参数即可，例如：
+
+```json
+{
+  "mcpServers": {
+    "CRIC物业AI": {
+      "transportType": "sse",
+      "url": "https://mcp.wuye-ai.cricbigdata.com/sse/mcp?token={{您的 CRIC物业AI Access Token}}&name_en=true"
+    }
+  }
+}
+```
