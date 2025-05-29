@@ -183,3 +183,16 @@ You can configure how CRIC Wuye AI MCP Server runs via environment variables. Su
 | `CRIC_WUYE_AI_PROVIDER_API_BASE` | *Not Supported*     | `https://export.wuye-ai.cricbigdata.com` | Backend API base URL (***this is not the MCP Server URL***). Optional values: `https://export.wuye-ai-staging.cricbigdata.com` (testing) or `https://export.wuye-ai.cricbigdata.com` (production).                                                                                                                                                                                                                                                                                                                   |
 | `CRIC_WUYE_AI_NAME_EN`           | `name_en`           | Preset for you by CRIC Wuye AI team      | Whether English tool names are used. Options: `true`, `false`. If set to `true`, English names will be used for the tools, which would be useful for non-Chinese users and improve compatibility with some non-Chinese models. We recommend to set this to `false` for models that support Chinese tool names, in order to get better performance. If set, the given value will override preset value.                                                                                                               |
 | `CRIC_WUYE_AI_FEATURE_SET`       | `feature_set`       | Preset for you by CRIC Wuye AI team      | Pre-configured feature set of tools. Options: `base`, `detail` and more. This flag decides what set of tools are available for you. The `base` feature set includes `List Available Knowledge Bases` tool and a universal `Search Knowledge Base` tool. While the `detail` feature set does not provide the `List Available Knowledge Bases` tool, but will provide specialized `Search Knowledge Base` tools for every single knowledge base available for you. If set, the given value will override preset value. |
+
+*P.S.* To set URL query parameters, just append them to SSE URL, like:
+
+```json
+{
+  "mcpServers": {
+    "CRIC-Wuye-AI": {
+      "transportType": "sse",
+      "url": "https://mcp.wuye-ai.cricbigdata.com/sse/mcp?name_en=true&token={{Your Access Token}}"
+    }
+  }
+}
+```
