@@ -35,14 +35,13 @@ CRIC builds its competitive edge in the Wuye AI collaboration space through thre
 
 ## MCP Server Features
 
-**CRIC Wuye AI MCP Server** is a server-side implementation based on the [Model Context Protocol](https://modelcontextprotocol.github.io/), delivering part of the atomic capabilities of the **CRIC Wuye AI** platform. The current version provides the following tools:
+**CRIC Wuye AI MCP Server** is a server-side implementation based on the [Model Context Protocol](https://modelcontextprotocol.github.io/), delivering part of the atomic capabilities of the **CRIC Wuye AI** platform. The current version provides the following main feature modules:
 
-- **Get Daily News:** Retrieve the property industry’s daily news report based on a `YYYY-MM-DD` date format.
-- **Get Hot Topics List:** Retrieve categorized lists of trending questions in the property management sector within CRIC Wuye AI.
-- **List Available Knowledge Bases:** List available knowledge bases for querying.
-- **Search Knowledge Base:** Specify a knowledge base ID and query to retrieve matching results as document snippets or full text for AI reference.
+- **Daily News:** Retrieve the property management industry’s daily news report.
+- **Knowledge Base:** Search the property management industry’s expertise knowledge bases.
+- **Question Answering:** Ask questions to CRIC Wuye AI and receive answers, or let CRIC Wuye AI analyze questions related to property management issues.
 
-More features are coming soon. Stay tuned.
+Please check out the [Tool Definition & Configuration](./TOOLS.md) doc for detailed tool definitions. More features are coming soon. Stay tuned.
 
 ## Obtaining an Access Token
 
@@ -196,3 +195,5 @@ You can configure how CRIC Wuye AI MCP Server runs via environment variables. Su
   }
 }
 ```
+
+For more information about `CRIC_WUYE_AI_NAME_EN` and `CRIC_WUYE_AI_FEATURE_SET`, please refer to the [Tool Definition & Configuration](./TOOLS.md) documentation.

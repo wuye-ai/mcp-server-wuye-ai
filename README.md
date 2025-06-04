@@ -33,14 +33,13 @@
 
 ## MCP Server 功能
 
-**CRIC物业AI MCP Server** 是一个基于 [Model Context Protocol](https://modelcontextprotocol.github.io/) 的服务端实现，基于 **CRIC物业AI** 平台的部分原子能力，目前版本提供了以下功能（Tool）：
+**CRIC物业AI MCP Server** 是一个基于 [Model Context Protocol](https://modelcontextprotocol.github.io/) 的服务端实现，基于 **CRIC物业AI** 平台的部分原子能力，目前版本提供了以下三大功能模块：
 
-- **获取资讯日报：** 根据 YYYY-MM-DD 形式的日期，获取当日物业行业资讯日报。
-- **获取行业热点问题列表：** 获取当前 CRIC物业AI 应用内物业行业热点问题的分类和列表。
-- **获取可用知识库列表：** 获取可用知识库列表，后续可以使用其中的知识库搜索相关知识。
-- **搜索知识库：** 指定具体知识库 ID，以及具体查询的问题，获取知识库搜索结果，以文档片段或全文形式返回，供 AI 参考。
+- **资讯日报：** 获取物业行业资讯日报。
+- **知识库：** 搜索物业行业专属知识库。
+- **智能问答：** 向 CRIC物业AI 提问获得答案，或者让 CRIC物业AI 帮助分析物业行业问题的场景。
 
-更多能力即将推出，敬请期待。
+具体工具（Tool）定义，请参考 [工具定义配置](./TOOLS.md) 文档。更多能力即将推出，敬请期待。
 
 ## 获取 Access Token
 
