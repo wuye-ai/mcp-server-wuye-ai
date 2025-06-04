@@ -177,7 +177,7 @@ CRIC_WUYE_AI_ACCESS_TOKEN={{您的 CRIC物业AI Access Token}} npx -y @wuye-ai/m
 | `PORT`                           | *不支持*         | `3011`                                   | HTTP 绑定端口，仅在 `http` 模式下有效。                                                                                                                                                    |
 | `CRIC_WUYE_AI_ACCESS_TOKEN`      | `token`       | *无*                                      | CRIC物业AI Access Token。如果不提供，则使用实际请求 HTTP Authorization Header 中的值。                                                                                                            |
 | `CRIC_WUYE_AI_PROVIDER_API_BASE` | *不支持*         | `https://export.wuye-ai.cricbigdata.com` | CRIC物业AI 后端接入 API，请注意 ***此 URL 不是 CRIC物业AI MCP Server 的 URL*** 。可选值为 `https://export.wuye-ai-staging.cricbigdata.com` （测试环境）、 `https://export.wuye-ai.cricbigdata.com` （生产环境） |
-| `CRIC_WUYE_AI_NAME_EN`           | `name_en`     | 由 CRIC物业AI 工作人员为您默认配置                    | 是否启用英文工具名称，支持 `true` 和 `false` 两个取值。启用时，Tool 名称将改为使用英文版本，以提高对部分海外模型的兼容性。对于支持中文工具名称的模型，建议不启用，以获得更好的效果。如果配置该选项，将覆盖默认配置。                                                         |
+| `CRIC_WUYE_AI_NAME_EN`           | `name_en`     | 由 CRIC物业AI 工作人员为您默认配置                    | 是否使用工具英文名称，支持 `true` 和 `false` 两个取值。启用时，Tool 名称将改为使用英文版本，以提高对部分海外模型的兼容性。对于支持中文工具名称的模型，建议不启用，以获得更好的效果。如果配置该选项，将覆盖默认配置。                                                         |
 | `CRIC_WUYE_AI_FEATURE_SET`       | `feature_set` | 由 CRIC物业AI 工作人员为您默认配置                    | 预配置的工具功能集，支持 `base`、`detail` 等取值。该参数决定了您可用的 Tool 集合，`base` 功能集中提供了“获取可用知识库列表”和通用的“搜索知识库”工具，而 `detail` 功能集中不提供“获取可用知识库列表”工具，但为每个可用的知识库提供了单独的“搜索知识库”工具。如果配置该选项，将覆盖默认配置。         |
 
 *注：* URL Query 配置时，只需要在 SSE 调用的 URL 后面拼接参数即可，例如：
@@ -192,3 +192,5 @@ CRIC_WUYE_AI_ACCESS_TOKEN={{您的 CRIC物业AI Access Token}} npx -y @wuye-ai/m
   }
 }
 ```
+
+关于 `CRIC_WUYE_AI_NAME_EN` 和 `CRIC_WUYE_AI_FEATURE_SET` 的更多信息，请参考 [工具定义配置](./TOOLS.md) 文档。
