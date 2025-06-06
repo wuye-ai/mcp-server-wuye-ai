@@ -70,3 +70,9 @@ CRIC_WUYE_AI_NAME_EN=detail npx -y @wuye-ai/mcp-server-wuye-ai
   }
 }
 ```
+
+## 工具调用输出格式是怎样的？
+
+在 CRIC物业AI MCP Server 中，工具调用的输出格式可以通过环境变量 `CRIC_WUYE_AI_OUTPUT_FORMAT` 或 URL Query 参数 `output` 来配置。支持的输出格式包括：
+- `raw`: 默认行为。不做特殊转化，直接返回工具调用的原始结果（对象 JSON.stringify ）。
+- `text`: 转化为对阅读者更加友好的 Markdown 文本格式，适合直接展示给用户。
