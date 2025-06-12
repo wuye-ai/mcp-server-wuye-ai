@@ -43,6 +43,12 @@ CRIC builds its competitive edge in the Wuye AI collaboration space through thre
 
 Please check out the [Tool Definition & Configuration](./TOOLS.md) doc for detailed tool definitions. More features are coming soon. Stay tuned.
 
+## CRIC Wuye AI Knowledge Bases
+
+By using the CRIC Wuye AI MCP Server, you can query high-quality, domain-specific knowledge bases built by CRIC for the property management industry. These knowledge texts can be retrieved based on user queries to support AI responses.
+
+Currently available knowledge bases include: **Laws and Regulations, Property Management Company Information, CRIC Rankings, Outstanding Property Service Cases, Industry Research, Emergency Response in Property Projects, Comprehensive Project Management, Complaint Handling, Legal Case Studies in Property Management, Non-Residential Property Management Research, and Property Management Case Studies**, among others.
+
 ## Obtaining an Access Token
 
 To use the CRIC Wuye AI MCP Server, you must first obtain an **Access Token**. Please contact our support staff via email at [xuanao@cric.com](mailto:xuanao@cric.com).
