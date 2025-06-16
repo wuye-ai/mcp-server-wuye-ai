@@ -33,7 +33,7 @@
 
 ## MCP Server 功能
 
-**CRIC物业AI MCP Server** 是一个基于 [Model Context Protocol](https://modelcontextprotocol.github.io/) 的服务端实现，基于 **CRIC物业AI** 平台的部分原子能力，目前版本提供了以下三大功能模块：
+**CRIC物业AI MCP Server** 是一个基于 [Model Context Protocol](https://modelcontextprotocol.io/) 的服务端实现，基于 **CRIC物业AI** 平台的部分原子能力，目前版本提供了以下三大功能模块：
 
 - **资讯日报：** 获取物业行业资讯日报。
 - **知识库：** 搜索物业行业专属知识库。

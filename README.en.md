@@ -35,7 +35,7 @@ CRIC builds its competitive edge in the Wuye AI collaboration space through thre
 
 ## MCP Server Features
 
-**CRIC Wuye AI MCP Server** is a server-side implementation based on the [Model Context Protocol](https://modelcontextprotocol.github.io/), delivering part of the atomic capabilities of the **CRIC Wuye AI** platform. The current version provides the following main feature modules:
+**CRIC Wuye AI MCP Server** is a server-side implementation based on the [Model Context Protocol](https://modelcontextprotocol.io/), delivering part of the atomic capabilities of the **CRIC Wuye AI** platform. The current version provides the following main feature modules:
 
 - **Daily News:** Retrieve the property management industry’s daily news report.
 - **Knowledge Base:** Search the property management industry’s expertise knowledge bases.
