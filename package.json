@@ -1,6 +1,6 @@
 {
 	"name": "@wuye-ai/mcp-server-wuye-ai",
-	"version": "1.1.10",
+	"version": "1.1.11",
 	"private": false,
 	"description": "CRIC物业AI MCP Server。CRIC物业AI 是克而瑞专为物业行业打造的智能 AI 助理。",
 	"bin": {
