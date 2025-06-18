@@ -12,7 +12,8 @@ Available on |
 [<img src="https://tcb.cloud.tencent.com/favicon.ico" width="12" height="12" alt="Tencent CloudBase Logo"> **Tencent CloudBase**](https://tcb.cloud.tencent.com/mcp-server/mcp-server-wuye-ai) |
 [<img src="https://g.alicdn.com/sail-web/maas/2.8.5/favicon/128.ico" width="12" height="12" alt="ModelScope Logo"> **ModelScope**](https://modelscope.cn/mcp/servers/@wuye-ai/mcp-server-wuye-ai) |
 [<img src="https://gw.alicdn.com/imgextra/i4/O1CN01vVn7g32134zNZEeAR_!!6000000006928-55-tps-24-24.svg" width="12" height="12" alt="Aliyun Bailian Logo"> **Aliyun Bailian**](https://bailian.console.aliyun.com/?tab=mcp#/mcp-market/detail/cric-wuye-ai) |
-[<img src="https://agi-dev-platform-web.cdn.bcebos.com/ai_apaas/favicon.ico" width="12" height="12" alt="Baidu AI Cloud Logo"> **Baidu AI Cloud**](https://console.bce.baidu.com/ai_apaas/mcpServerCenter/mcp_t_cric_ai/detail)
+[<img src="https://agi-dev-platform-web.cdn.bcebos.com/ai_apaas/favicon.ico" width="12" height="12" alt="Baidu AI Cloud Logo"> **Baidu AI Cloud**](https://console.bce.baidu.com/ai_apaas/mcpServerCenter/mcp_t_cric_ai/detail) |
+[<img src="https://gips3.baidu.com/it/u=1551671786,626435656&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f300_315" width="12" height="12" alt="Baidu Search AI Logo"> **Baidu Search AI**](https://sai.baidu.com/server/CRIC?id=DZy6eHdoKx2v3gfThymJXf)
 
 (More MCP platform integrations coming soon…)
 
