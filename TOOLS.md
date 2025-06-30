@@ -57,7 +57,7 @@ CRIC_WUYE_AI_FEATURE_SET=detail npx -y @wuye-ai/mcp-server-wuye-ai
 我们在为您生成 CRIC物业AI Access Token 时，会根据您的应用场景，为您默认配置是否“使用工具英文名称”。如果确实需要临时覆盖设置，您可以在 MCP Server 的环境变量中配置 `CRIC_WUYE_AI_NAME_EN`，或者在 SSE 调用的 URL Query 后面追加 `name_en`，来覆盖默认的配置。例如：
 
 ```sh
-CRIC_WUYE_AI_NAME_EN=detail npx -y @wuye-ai/mcp-server-wuye-ai
+CRIC_WUYE_AI_NAME_EN=true npx -y @wuye-ai/mcp-server-wuye-ai
 ```
 
 ```json
