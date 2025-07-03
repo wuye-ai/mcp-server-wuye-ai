@@ -4,6 +4,8 @@
 [![NPM Version](https://img.shields.io/npm/v/%40wuye-ai%2Fmcp-server-wuye-ai)](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai)
 [![zh-CN](https://img.shields.io/badge/lang-zh--CN-red.svg)](https://github.com/wuye-ai/mcp-server-wuye-ai/blob/master/README.md)
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/wuye-ai/mcp-server-wuye-ai/blob/master/README.en.md)
+[![Apply For Access Token](https://img.shields.io/badge/%E7%94%B3%E8%AF%B7%E5%BC%80%E9%80%9A-gray?label=%F0%9F%91%8B)](https://wuye-ai.cricbigdata.com/mcp)
+[![Practical Guide](https://img.shields.io/badge/%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97-gray?label=%F0%9F%A7%AD)](https://wuye-ai.cricbigdata.com/mcp)
 
 Available on |
 [<img src="https://static-production.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png" width="12" height="12" alt="NPM Logo"> **NPM**](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai) |
@@ -53,7 +55,7 @@ Currently available knowledge bases include: **Laws and Regulations, Property Ma
 
 ## Obtaining an Access Token
 
-To use the CRIC Wuye AI MCP Server, you must first obtain an **Access Token**. Please contact our support staff via email at [xuanao@cric.com](mailto:xuanao@cric.com).
+To use the CRIC Wuye AI MCP Server, you must first obtain an **Access Token**. Please visit our website: [Apply for Trial Access of CRIC-Wuye-AI MCP Server](https://wuye-ai.cricbigdata.com/mcp) .
 
 ## Getting Started
 
@@ -177,7 +179,11 @@ For Stdio access via third-party tools, specify the Access Token using the `CRIC
 }
 ```
 
-## Optional Configuration
+## Practical Guide
+
+You can access your CRIC Wuye AI MCP Server from various AI Agent platforms, like Dingtalk AI Assistant, etc. Please refer to our [Practical Guide (Chinese)](https://alidocs.dingtalk.com/i/p/nb9XJDP07QqPDGyA/docs/mweZ92PV6My4ebxdHdb9oQBYWxEKBD6p) for your convenience.
+
+## Optional Configurations
 
 You can configure how CRIC Wuye AI MCP Server runs via environment variables. Supported options:
 

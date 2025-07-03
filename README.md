@@ -4,6 +4,8 @@
 [![NPM Version](https://img.shields.io/npm/v/%40wuye-ai%2Fmcp-server-wuye-ai)](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai)
 [![zh-CN](https://img.shields.io/badge/lang-zh--CN-red.svg)](https://github.com/wuye-ai/mcp-server-wuye-ai/blob/master/README.md)
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/wuye-ai/mcp-server-wuye-ai/blob/master/README.en.md)
+[![Apply For Access Token](https://img.shields.io/badge/%E7%94%B3%E8%AF%B7%E5%BC%80%E9%80%9A-gray?label=%F0%9F%91%8B)](https://wuye-ai.cricbigdata.com/mcp)
+[![Practical Guide](https://img.shields.io/badge/%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97-gray?label=%F0%9F%A7%AD)](https://wuye-ai.cricbigdata.com/mcp)
 
 已上架 | 
 [<img src="https://static-production.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png" width="12" height="12" alt="NPM Logo"> **NPM**](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai) | 
@@ -51,7 +53,7 @@
 
 ## 获取 Access Token
 
-您需要先获取 **CRIC物业AI Access Token** 才能使用 CRIC物业AI MCP Server 的功能。请联系我们的客服人员申请，联系邮箱：[xuanao@cric.com](mailto:xuanao@cric.com) 。
+您需要先获取 **CRIC物业AI Access Token** 才能使用 CRIC物业AI MCP Server 的功能。请访问我们的网站申请：[申请开通体验 CRIC物业AI MCP Server](https://wuye-ai.cricbigdata.com/mcp)。
 
 ## 快速开始
 
@@ -172,6 +174,10 @@ CRIC_WUYE_AI_ACCESS_TOKEN={{您的 CRIC物业AI Access Token}} npx -y @wuye-ai/m
   }
 }
 ```
+
+## 实践指南
+
+CRIC物业AI MCP Server 支持各类智能体平台接入，如钉钉AI助理等。您可以参考 [实践指南](https://alidocs.dingtalk.com/i/p/nb9XJDP07QqPDGyA/docs/mweZ92PV6My4ebxdHdb9oQBYWxEKBD6p) 进行操作体验。
 
 ## 可选配置
 
