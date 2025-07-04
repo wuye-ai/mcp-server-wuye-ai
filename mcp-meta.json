@@ -6,15 +6,7 @@
     "name": "克而瑞"
   },
   "gitUrl": "https://github.com/wuye-ai/mcp-server-wuye-ai",
-  "tags": [
-    "知识库",
-    "行业应用",
-    "克而瑞",
-    "资讯",
-    "物业",
-    "业主",
-    "社区治理"
-  ],
+  "tags": ["知识库", "行业应用", "克而瑞", "资讯", "物业", "业主", "社区治理"],
   "memory": 0.5,
   "cpu": 0.25,
   "min_instances": 1,
