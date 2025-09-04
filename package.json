@@ -6,7 +6,10 @@
   "bin": {
     "mcp-server-wuye-ai": "index.js"
   },
-  "repository": "git+https://github.com/wuye-ai/mcp-server-wuye-ai.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuye-ai/mcp-server-wuye-ai.git"
+  },
   "scripts": {},
   "dependencies": {},
   "devDependencies": {},
