@@ -43,7 +43,6 @@ CRIC builds its competitive edge in the Wuye AI collaboration space through thre
 
 - **Daily News:** Retrieve the property management industry’s daily news report.
 - **Knowledge Base:** Search the property management industry’s expertise knowledge bases.
-- **Question Answering:** Ask questions to CRIC Wuye AI and receive answers, or let CRIC Wuye AI analyze questions related to property management issues.
 
 Please check out the [Tool Definition & Configuration](./TOOLS.md) doc for detailed tool definitions. More features are coming soon. Stay tuned.
 
