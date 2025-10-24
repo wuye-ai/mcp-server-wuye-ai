@@ -8,7 +8,7 @@
 [![Practical Guide](https://img.shields.io/badge/%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97-gray?label=%F0%9F%A7%AD)](https://wuye-ai.cricbigdata.com/mcp)
 
 已上架 | 
-[<img src="https://static-production.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png" width="12" height="12" alt="NPM Logo"> **NPM**](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai) | 
+[<img src="https://raw.githubusercontent.com/npm/logos/refs/heads/master/npm%20square/n-64.png" width="12" height="12" alt="NPM Logo"> **NPM**](https://www.npmjs.com/package/@wuye-ai/mcp-server-wuye-ai) | 
 [<img src="https://mcp.so/favicon.ico" width="12" height="12" alt="MCP.so Logo"> **MCP.so**](https://mcp.so/server/CRIC%E7%89%A9%E4%B8%9AAI/CRIC) |
 [<img src="https://mcpservers.org/icon.png" width="12" height="12" alt="MCPServers.org Logo"> **MCPServers.org**](https://mcpservers.org/servers/wuye-ai/mcp-server-wuye-ai) |
 [<img src="https://tcb.cloud.tencent.com/favicon.ico" width="12" height="12" alt="腾讯云开发 Logo"> **腾讯云开发**](https://tcb.cloud.tencent.com/mcp-server/mcp-server-wuye-ai) |
