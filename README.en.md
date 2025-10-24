@@ -72,9 +72,9 @@ MODE=http PORT=3011 npx -y @wuye-ai/mcp-server-wuye-ai
 
 After successful startup, your MCP Server URL is `http://localhost:3011/sse/mcp`.
 
-##### B. Use Official:
+##### B. Use Official (Recommended):
 
-Alternatively, you can use our official MCP Server URLs:
+We **recommend** you to use our official MCP Server URLs:
 
 - Testing: `https://mcp.wuye-ai-staging.cricbigdata.com/sse/mcp`
 - Production: `https://mcp.wuye-ai.cricbigdata.com/sse/mcp`

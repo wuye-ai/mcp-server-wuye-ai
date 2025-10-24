@@ -37,7 +37,7 @@
 
 ## MCP Server 功能
 
-**CRIC物业AI MCP Server** 是一个基于 [Model Context Protocol](https://modelcontextprotocol.io/) 的服务端实现，基于 **CRIC物业AI** 平台的部分原子能力，目前版本提供了以下三大功能模块：
+**CRIC物业AI MCP Server** 是一个基于 [Model Context Protocol](https://modelcontextprotocol.io/) 的服务端实现，基于 **CRIC物业AI** 平台的部分原子能力，目前版本提供了以下功能模块：
 
 - **资讯日报：** 获取物业行业资讯日报。
 - **知识库：** 搜索物业行业专属知识库。
@@ -70,9 +70,9 @@ MODE=http PORT=3011 npx -y @wuye-ai/mcp-server-wuye-ai
 
 运行成功后，MCP Server URL 为 `http://localhost:3011/sse/mcp` 。
 
-##### B. 使用官方：
+##### B. 使用官方（推荐）：
 
-或者您也可以直接使用我们的官方的 MCP Server URL：
+**推荐**您直接使用我们提供的官方 MCP Server URL：
 
 - 测试环境：`https://mcp.wuye-ai-staging.cricbigdata.com/sse/mcp`
 - 生产环境：`https://mcp.wuye-ai.cricbigdata.com/sse/mcp`
