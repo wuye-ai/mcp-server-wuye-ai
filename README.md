@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/wuye-ai-mcp-server-wuye-ai-badge.png)](https://mseep.ai/app/wuye-ai-mcp-server-wuye-ai)
+
 # CRIC物业AI MCP Server
 
 --------------
