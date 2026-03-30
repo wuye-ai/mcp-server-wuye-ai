@@ -76,8 +76,10 @@ After successful startup, your MCP Server URL is `http://localhost:3011/sse/mcp`
 
 We **recommend** you to use our official MCP Server URLs:
 
-- Testing: `https://mcp.wuye-ai-staging.cricbigdata.com/sse/mcp`
-- Production: `https://mcp.wuye-ai.cricbigdata.com/sse/mcp`
+- Testing: `https://mcp-stg.wuye.dichanai.com/sse/mcp`
+- Production: `https://mcp.wuye.dichanai.com/sse/mcp`
+
+Please note that Access Tokens for testing and production environments are not interchangeable. Please choose the appropriate environment based on the information you received when applying for your Access Token.
 
 #### 1.2 Test
 
@@ -108,7 +110,7 @@ When using SSE mode with other tools, set the `Authorization` header with your A
   "mcpServers": {
     "CRIC-Wuye-AI": {
       "transportType": "sse",
-      "url": "https://mcp.wuye-ai.cricbigdata.com/sse/mcp?name_en=true",
+      "url": "https://mcp.wuye.dichanai.com/sse/mcp",
       "headers": {
         "Authorization": "Bearer {{Your Access Token}}"
       }
@@ -124,13 +126,11 @@ Note: Some tools using [@modelcontextprotocol/typescript-sdk](https://github.com
   "mcpServers": {
     "CRIC-Wuye-AI": {
       "transportType": "sse",
-      "url": "https://mcp.wuye-ai.cricbigdata.com/sse/mcp?name_en=true&token={{Your Access Token}}"
+      "url": "https://mcp.wuye.dichanai.com/sse/mcp&token={{Your Access Token}}"
     }
   }
 }
 ```
-
-Also, setting the `name_en` query parameter to `true` will use English names for the tools, which is useful for non-Chinese users.
 
 ### 2. Stdio Mode
 
@@ -186,16 +186,15 @@ You can access your CRIC Wuye AI MCP Server from various AI Agent platforms, lik
 
 You can configure how CRIC Wuye AI MCP Server runs via environment variables. Supported options:
 
-| Environment Variable Parameter   | URL Query Parameter | Default                                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|----------------------------------|---------------------|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `MODE`                           | *Not Supported*     | `stdio`                                  | Run mode. Options: `stdio`, `http`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `HOSTNAME`                       | *Not Supported*     | `0.0.0.0`                                | Hostname for HTTP mode. `0.0.0.0` binds to all your IP addresses.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `PORT`                           | *Not Supported*     | `3011`                                   | Port for HTTP mode.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `CRIC_WUYE_AI_ACCESS_TOKEN`      | `token`             | *none*                                   | CRIC Wuye AI Access Token. If not provided, will use the `Authorization` HTTP header value.                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `CRIC_WUYE_AI_PROVIDER_API_BASE` | *Not Supported*     | `https://export.wuye-ai.cricbigdata.com` | Backend API base URL (***this is not the MCP Server URL***). Optional values: `https://export.wuye-ai-staging.cricbigdata.com` (testing) or `https://export.wuye-ai.cricbigdata.com` (production).                                                                                                                                                                                                                                                                                                                   |
-| `CRIC_WUYE_AI_NAME_EN`           | `name_en`           | Preset for you by CRIC Wuye AI team      | Whether English tool names are used. Options: `true`, `false`. If set to `true`, English names will be used for the tools, which would be useful for non-Chinese users and improve compatibility with some non-Chinese models. We recommend to set this to `false` for models that support Chinese tool names, in order to get better performance. If set, the given value will override preset value.                                                                                                               |
-| `CRIC_WUYE_AI_FEATURE_SET`       | `feature_set`       | Preset for you by CRIC Wuye AI team      | Pre-configured feature set of tools. Options: `base`, `detail` and more. This flag decides what set of tools are available for you. The `base` feature set includes `List Available Knowledge Bases` tool and a universal `Search Knowledge Base` tool. While the `detail` feature set does not provide the `List Available Knowledge Bases` tool, but will provide specialized `Search Knowledge Base` tools for every single knowledge base available for you. If set, the given value will override preset value. |
-| `CRIC_WUYE_AI_OUTPUT_FORMAT`     | `output`            | `raw`                                    | Tool call output format. Options: `raw`(original), `text`(converted to Markdown text).                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Environment Variable Parameter   | URL Query Parameter | Default                             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|----------------------------------|---------------------|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `MODE`                           | *Not Supported*     | `stdio`                             | Run mode. Options: `stdio`, `http`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `HOSTNAME`                       | *Not Supported*     | `0.0.0.0`                           | Hostname for HTTP mode. `0.0.0.0` binds to all your IP addresses.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `PORT`                           | *Not Supported*     | `3011`                              | Port for HTTP mode.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `CRIC_WUYE_AI_ACCESS_TOKEN`      | `token`             | *none*                              | CRIC Wuye AI Access Token. If not provided, will use the `Authorization` HTTP header value.                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `CRIC_WUYE_AI_PROVIDER_API_BASE` | *Not Supported*     | `https://app.wuye.aifangdichan.com` | Backend API base URL (***this is not the MCP Server URL***). Optional values: `https://app.stg.aifangdichan.com` (testing) or `https://app.wuye.aifangdichan.com` (production).                                                                                                                                                                                                                                                                                                                                      |
+| `CRIC_WUYE_AI_FEATURE_SET`       | `feature_set`       | Preset for you by CRIC Wuye AI team | Pre-configured feature set of tools. Options: `base`, `detail` and more. This flag decides what set of tools are available for you. The `base` feature set includes `List Available Knowledge Bases` tool and a universal `Search Knowledge Base` tool. While the `detail` feature set does not provide the `List Available Knowledge Bases` tool, but will provide specialized `Search Knowledge Base` tools for every single knowledge base available for you. If set, the given value will override preset value. |
+| `CRIC_WUYE_AI_OUTPUT_FORMAT`     | `output`            | `raw`                               | Tool call output format. Options: `raw`(original), `text`(converted to Markdown text).                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 *P.S.* To set URL query parameters, just append them to SSE URL, like:
 
@@ -204,10 +203,10 @@ You can configure how CRIC Wuye AI MCP Server runs via environment variables. Su
   "mcpServers": {
     "CRIC-Wuye-AI": {
       "transportType": "sse",
-      "url": "https://mcp.wuye-ai.cricbigdata.com/sse/mcp?name_en=true&token={{Your Access Token}}"
+      "url": "https://mcp.wuye.dichanai.com/sse/mcp&token={{Your Access Token}}"
     }
   }
 }
 ```
 
-For more information about `CRIC_WUYE_AI_NAME_EN` and `CRIC_WUYE_AI_FEATURE_SET`, please refer to the [Tool Definition & Configuration](./TOOLS.md) documentation.
+For more information about `CRIC_WUYE_AI_FEATURE_SET`, please refer to the [Tool Definition & Configuration](./TOOLS.md) documentation.

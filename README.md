@@ -74,8 +74,10 @@ MODE=http PORT=3011 npx -y @wuye-ai/mcp-server-wuye-ai
 
 **推荐**您直接使用我们提供的官方 MCP Server URL：
 
-- 测试环境：`https://mcp.wuye-ai-staging.cricbigdata.com/sse/mcp`
-- 生产环境：`https://mcp.wuye-ai.cricbigdata.com/sse/mcp`
+- 测试环境：`https://mcp-stg.wuye.dichanai.com/sse/mcp`
+- 生产环境：`https://mcp.wuye.dichanai.com/sse/mcp`
+
+请注意，测试环境和生产环境的 Access Token 不通用，请根据您申请 Access Token 时获得的环境信息选择使用。
 
 #### 1.2 测试
 
@@ -86,10 +88,10 @@ MODE=http PORT=3011 npx -y @wuye-ai/mcp-server-wuye-ai
 服务运行成功后，您可以运行 [MCP Inspector](https://github.com/modelcontextprotocol/inspector) 来查看并测试服务是否正常运行。
 
 ```bash
-npx @modelcontextprotocol/inspector
+npx -y @modelcontextprotocol/inspector
 ```
 
-MCP Inspector 启动后，用浏览器打开其 Web UI（默认为：http://127.0.0.1:6274/ ）。并按照如下步骤配置连接：
+MCP Inspector 启动后，根据其提示的网址打开其 Web UI。并按照如下步骤配置连接：
 
 1. 在界面左侧设置 Transport Type 为 `SSE`，URL 为上一步获得的 MCP Server URL。
 2. 展开 Authentication 面板，设置 Header Name 为 `Authorization` ，Bearer Token 为您的 **CRIC物业AI Access Token**。
@@ -106,7 +108,7 @@ MCP Inspector 启动后，用浏览器打开其 Web UI（默认为：http://127.
   "mcpServers": {
     "CRIC物业AI": {
       "transportType": "sse",
-      "url": "https://mcp.wuye-ai.cricbigdata.com/sse/mcp",
+      "url": "https://mcp.wuye.dichanai.com/sse/mcp",
       "headers": {
         "Authorization": "Bearer {{您的 CRIC物业AI Access Token}}"
       }
@@ -122,7 +124,7 @@ MCP Inspector 启动后，用浏览器打开其 Web UI（默认为：http://127.
   "mcpServers": {
     "CRIC物业AI": {
       "transportType": "sse",
-      "url": "https://mcp.wuye-ai.cricbigdata.com/sse/mcp?token={{您的 CRIC物业AI Access Token}}"
+      "url": "https://mcp.wuye.dichanai.com/sse/mcp?token={{您的 CRIC物业AI Access Token}}"
     }
   }
 }
@@ -182,16 +184,15 @@ CRIC物业AI MCP Server 支持各类智能体平台接入，如钉钉AI助理等
 
 您可以通过环境变量或 URL Query（SSE方式下） 来配置 CRIC物业AI MCP Server 的运行方式。以下是可用的配置项：
 
-| 环境变量参数名                          | URL Query 参数名 | 默认值                                      | 描述                                                                                                                                                                            |
-|----------------------------------|---------------|------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `MODE`                           | *不支持*         | `stdio`                                  | 运行模式，支持 `stdio` 和 `http` 两种模式。                                                                                                                                                |
-| `HOSTNAME`                       | *不支持*         | `0.0.0.0`                                | HTTP 绑定主机名，仅在 `http` 模式下有效。`0.0.0.0`即为绑定到本机所有IP地址。                                                                                                                            |
-| `PORT`                           | *不支持*         | `3011`                                   | HTTP 绑定端口，仅在 `http` 模式下有效。                                                                                                                                                    |
-| `CRIC_WUYE_AI_ACCESS_TOKEN`      | `token`       | *无*                                      | CRIC物业AI Access Token。如果不提供，则使用实际请求 HTTP Authorization Header 中的值。                                                                                                            |
-| `CRIC_WUYE_AI_PROVIDER_API_BASE` | *不支持*         | `https://export.wuye-ai.cricbigdata.com` | CRIC物业AI 后端接入 API，请注意 ***此 URL 不是 CRIC物业AI MCP Server 的 URL*** 。可选值为 `https://export.wuye-ai-staging.cricbigdata.com` （测试环境）、 `https://export.wuye-ai.cricbigdata.com` （生产环境） |
-| `CRIC_WUYE_AI_NAME_EN`           | `name_en`     | 由 CRIC物业AI 工作人员为您默认配置                    | 是否使用工具英文名称，支持 `true` 和 `false` 两个取值。启用时，Tool 名称将改为使用英文版本，以提高对部分海外模型的兼容性。对于支持中文工具名称的模型，建议不启用，以获得更好的效果。如果配置该选项，将覆盖默认配置。                                                         |
-| `CRIC_WUYE_AI_FEATURE_SET`       | `feature_set` | 由 CRIC物业AI 工作人员为您默认配置                    | 预配置的工具功能集，支持 `base`、`detail` 等取值。该参数决定了您可用的 Tool 集合，`base` 功能集中提供了“获取可用知识库列表”和通用的“搜索知识库”工具，而 `detail` 功能集中不提供“获取可用知识库列表”工具，但为每个可用的知识库提供了单独的“搜索知识库”工具。如果配置该选项，将覆盖默认配置。         |
-| `CRIC_WUYE_AI_OUTPUT_FORMAT`     | `output`      | `raw`                                    | 工具调用输出格式，支持 `raw`（不转化）、`text`（转化为 Markdown 文本）等取值。                                                                                                                            |
+| 环境变量参数名                          | URL Query 参数名 | 默认值                                 | 描述                                                                                                                                                                    |
+|----------------------------------|---------------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `MODE`                           | *不支持*         | `stdio`                             | 运行模式，支持 `stdio` 和 `http` 两种模式。                                                                                                                                        |
+| `HOSTNAME`                       | *不支持*         | `0.0.0.0`                           | HTTP 绑定主机名，仅在 `http` 模式下有效。`0.0.0.0`即为绑定到本机所有IP地址。                                                                                                                    |
+| `PORT`                           | *不支持*         | `3011`                              | HTTP 绑定端口，仅在 `http` 模式下有效。                                                                                                                                            |
+| `CRIC_WUYE_AI_ACCESS_TOKEN`      | `token`       | *无*                                 | CRIC物业AI Access Token。如果不提供，则使用实际请求 HTTP Authorization Header 中的值。                                                                                                    |
+| `CRIC_WUYE_AI_PROVIDER_API_BASE` | *不支持*         | `https://app.wuye.aifangdichan.com` | CRIC物业AI 后端接入 API，请注意 ***此 URL 不是 CRIC物业AI MCP Server 的 URL*** 。可选值为 `https://app.stg.aifangdichan.com/` （测试环境）、 `https://app.wuye.aifangdichan.com` （生产环境）           |
+| `CRIC_WUYE_AI_FEATURE_SET`       | `feature_set` | 由 CRIC物业AI 工作人员为您默认配置               | 预配置的工具功能集，支持 `base`、`detail` 等取值。该参数决定了您可用的 Tool 集合，`base` 功能集中提供了“获取可用知识库列表”和通用的“搜索知识库”工具，而 `detail` 功能集中不提供“获取可用知识库列表”工具，但为每个可用的知识库提供了单独的“搜索知识库”工具。如果配置该选项，将覆盖默认配置。 |
+| `CRIC_WUYE_AI_OUTPUT_FORMAT`     | `output`      | `raw`                               | 工具调用输出格式，支持 `raw`（不转化）、`text`（转化为 Markdown 文本）等取值。                                                                                                                    |
 
 *注：* URL Query 配置时，只需要在 SSE 调用的 URL 后面拼接参数即可，例如：
 
@@ -200,10 +201,10 @@ CRIC物业AI MCP Server 支持各类智能体平台接入，如钉钉AI助理等
   "mcpServers": {
     "CRIC物业AI": {
       "transportType": "sse",
-      "url": "https://mcp.wuye-ai.cricbigdata.com/sse/mcp?token={{您的 CRIC物业AI Access Token}}&name_en=true"
+      "url": "https://mcp.wuye.dichanai.com/sse/mcp?token={{您的 CRIC物业AI Access Token}}&feature_set=detail"
     }
   }
 }
 ```
 
-关于 `CRIC_WUYE_AI_NAME_EN` 和 `CRIC_WUYE_AI_FEATURE_SET` 的更多信息，请参考 [工具定义配置](./TOOLS.md) 文档。
+关于 `CRIC_WUYE_AI_FEATURE_SET` 的更多信息，请参考 [工具定义配置](./TOOLS.md) 文档。
