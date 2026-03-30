@@ -207,3 +207,8 @@ CRIC物业AI MCP Server 支持各类智能体平台接入，如钉钉AI助理等
 ```
 
 关于 `CRIC_WUYE_AI_NAME_EN` 和 `CRIC_WUYE_AI_FEATURE_SET` 的更多信息，请参考 [工具定义配置](./TOOLS.md) 文档。
+
+## Hosted deployment
+
+A hosted deployment is available on [Fronteir AI](https://fronteir.ai/mcp/wuye-ai-mcp-server-wuye-ai).
+
